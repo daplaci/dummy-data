@@ -2,6 +2,9 @@
 Helper files for setting up dummy data.
 
 ## Structure
+These scripts assumes the following folder structure:
+
+```
 .
 ├── docker-compose.yaml
 ├── dummy-data
@@ -43,6 +46,7 @@ Helper files for setting up dummy data.
     ├── DRUG_STRENGTH.csv
     ├── RELATIONSHIP.csv
     └── VOCABULARY.csv
+```
 
 ## Process
 1. Make sure you're in `./dummy-data`
