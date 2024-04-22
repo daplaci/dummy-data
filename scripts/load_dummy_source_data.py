@@ -1,5 +1,5 @@
 import sys
-sys.path.append("..")
+sys.path.insert(0, "../rigshospitalet_etl/")
 
 import os
 
@@ -22,7 +22,7 @@ rigs_engine = make_engine_postgres(rigs_cnxn)
 def write_to_db(db_engine, table_frame: pd.DataFrame, table_name: str, schema: str = "source"):
     table_frame.to_sql(table_name, db_engine, if_exists="append", index=False, schema=schema)
 
-path = os.path.join(os.path.dirname(__file__), "../dummy_data/")
+path = os.path.join(os.path.dirname(__file__), "../data/")
 
 administrations_df = pd.read_csv(f"{path}administrations.csv")
 course_metadata_df = pd.read_csv(f"{path}course_metadata.csv")

@@ -3,7 +3,7 @@
 from typing import Final, List
 import sys
 
-sys.path.insert(0, "/Users/ctx327/Documents/GitHub/rigshospitalet_etl/")
+sys.path.insert(0, "../rigshospitalet_etl/")
 from etl.models.modelutils import (
     DIALECT_POSTGRES,
     create_tables_sql,
